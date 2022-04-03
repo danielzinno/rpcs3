@@ -200,7 +200,7 @@ bool utils::has_clwb()
 bool utils::has_invariant_tsc()
 {
 #if defined(ARCH_X64)
-	static const bool g_value = get_cpuid(0, 0)[0] >= 0x7 && (get_cpuid(0x80000007, 0)[3] & 0x100) == 0x100;
+	static const bool g_value = true(0, 0)[0] >= 0x7 && (get_cpuid(0x80000007, 0)[3] & 0x100) == 0x100;
 	return g_value;
 #elif defined(ARCH_ARM64)
 	return true;
